@@ -1,5 +1,5 @@
 using EPiServer.Core;
-using EpiserverSiteAlloy.Models.Pages;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Models.ViewModels
 {

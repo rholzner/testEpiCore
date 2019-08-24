@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "testEpiCore", "testEpiCore\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EpiserverSiteAlloy", "EpiserverSiteAlloy\EpiserverSiteAlloy.csproj", "{839FE855-FD75-4024-B520-87A277C3DE91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{3A60778F-A96C-474A-AE5C-F0E534F4405E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{839FE855-FD75-4024-B520-87A277C3DE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{839FE855-FD75-4024-B520-87A277C3DE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{839FE855-FD75-4024-B520-87A277C3DE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A60778F-A96C-474A-AE5C-F0E534F4405E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A60778F-A96C-474A-AE5C-F0E534F4405E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A60778F-A96C-474A-AE5C-F0E534F4405E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A60778F-A96C-474A-AE5C-F0E534F4405E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

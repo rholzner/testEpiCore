@@ -2,8 +2,8 @@ using System;
 using System.Web.Mvc;
 using EPiServer;
 using EPiServer.Framework.DataAnnotations;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Controllers
 {

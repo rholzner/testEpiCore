@@ -2,12 +2,12 @@ using System.Web;
 using System.Web.Mvc;
 using EPiServer.Core;
 using EpiserverSiteAlloy.Helpers;
-using EpiserverSiteAlloy.Models.Blocks;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
 using EPiServer;
+using Models.Blocks;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Controllers
 {

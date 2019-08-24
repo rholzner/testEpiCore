@@ -2,10 +2,12 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.ServiceLocation;
 using EpiserverSiteAlloy.Controllers;
-using EpiserverSiteAlloy.Models.Blocks;
-using EpiserverSiteAlloy.Models.Pages;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
+using Models.Contracts;
+using Models.Blocks;
+using Models.Pages;
+using Models;
 
 namespace EpiserverSiteAlloy.Business.Rendering
 {
@@ -39,7 +41,7 @@ namespace EpiserverSiteAlloy.Business.Rendering
         {
             viewTemplateModelRegistrator.Add(typeof(JumbotronBlock), new TemplateModel
             {
-                Tags = new[] { Global.ContentAreaTags.FullWidth },
+                Tags = new[] { SiteGlobal.ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = BlockPath("JumbotronBlockWide.cshtml")
             });
@@ -47,7 +49,7 @@ namespace EpiserverSiteAlloy.Business.Rendering
             viewTemplateModelRegistrator.Add(typeof(TeaserBlock), new TemplateModel
             {
                 Name = "TeaserBlockWide",
-                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.FullWidth },
+                Tags = new[] { SiteGlobal.ContentAreaTags.TwoThirdsWidth, SiteGlobal.ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = BlockPath("TeaserBlockWide.cshtml")
             });
@@ -64,7 +66,7 @@ namespace EpiserverSiteAlloy.Business.Rendering
             {
                 Name = "PagePartialWide",
                 Inherit = true,
-                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.FullWidth },
+                Tags = new[] { SiteGlobal.ContentAreaTags.TwoThirdsWidth, SiteGlobal.ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = PagePartialPath("PageWide.cshtml")
             });
@@ -72,7 +74,7 @@ namespace EpiserverSiteAlloy.Business.Rendering
             viewTemplateModelRegistrator.Add(typeof(ContactPage), new TemplateModel
             {
                 Name = "ContactPagePartialWide",
-                Tags = new[] { Global.ContentAreaTags.TwoThirdsWidth, Global.ContentAreaTags.FullWidth },
+                Tags = new[] { SiteGlobal.ContentAreaTags.TwoThirdsWidth, SiteGlobal.ContentAreaTags.FullWidth },
                 AvailableWithoutTag = false,
                 Path = PagePartialPath("ContactPageWide.cshtml")
             });
@@ -81,7 +83,7 @@ namespace EpiserverSiteAlloy.Business.Rendering
             {
                 Name = "NoRendererMessage",
                 Inherit = true,
-                Tags = new[] { Global.ContentAreaTags.NoRenderer },
+                Tags = new[] { SiteGlobal.ContentAreaTags.NoRenderer },
                 AvailableWithoutTag = false,
                 Path = BlockPath("NoRenderer.cshtml")
             });

@@ -1,21 +1,19 @@
+using EPiServer.Core;
+using EPiServer.Framework.Web;
+using EPiServer.Search;
+using EPiServer.Web;
+using EPiServer.Web.Routing;
+using EpiserverSiteAlloy.Business;
+using EpiserverSiteAlloy.Models.ViewModels;
+using Models.Pages;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using EPiServer.Core;
-using EPiServer.Framework.Web;
-using EPiServer.Search;
-using EpiserverSiteAlloy.Business;
-using EpiserverSiteAlloy.Models.Pages;
-using EpiserverSiteAlloy.Models.ViewModels;
-using EPiServer.Web;
-using EPiServer.Web.Hosting;
-using EPiServer.Web.Mvc.Html;
-using EPiServer.Web.Routing;
 
 namespace EpiserverSiteAlloy.Controllers
 {
-    public class SearchPageController : PageControllerBase<SearchPage>
+  public class SearchPageController : PageControllerBase<SearchPage>
     {
         private const int MaxResults = 40;
         private readonly SearchService _searchService;

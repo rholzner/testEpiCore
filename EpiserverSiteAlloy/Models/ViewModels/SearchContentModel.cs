@@ -1,5 +1,5 @@
+using Models.Pages;
 using System.Collections.Generic;
-using EpiserverSiteAlloy.Models.Pages;
 
 namespace EpiserverSiteAlloy.Models.ViewModels
 {

@@ -1,7 +1,7 @@
 using System.Web;
 using System.Web.Mvc;
 using EPiServer.SpecializedProperties;
-using EpiserverSiteAlloy.Models.Blocks;
+using Models.Blocks;
 
 namespace EpiserverSiteAlloy.Models.ViewModels
 {

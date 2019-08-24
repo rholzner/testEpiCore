@@ -1,6 +1,6 @@
 using EPiServer.Editor;
 using EPiServer.Shell;
-using EpiserverSiteAlloy.Models.Pages;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Business.UIDescriptors
 {

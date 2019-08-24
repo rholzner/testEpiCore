@@ -3,13 +3,14 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Security;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.Data;
 using EPiServer.Web;
 using EPiServer.Web.Routing;
+using Models.Pages;
+using Models;
 
 namespace EpiserverSiteAlloy.Business
 {
@@ -58,7 +59,7 @@ namespace EpiserverSiteAlloy.Business
         {
             return string.Format(
                 "{0}?ReturnUrl={1}",
-                (FormsAuthentication.IsEnabled ? FormsAuthentication.LoginUrl : VirtualPathUtility.ToAbsolute(Global.AppRelativeLoginPath)),
+                (FormsAuthentication.IsEnabled ? FormsAuthentication.LoginUrl : VirtualPathUtility.ToAbsolute(SiteGlobal.AppRelativeLoginPath)),
                 _urlResolver.GetUrl(returnToContentLink));
         }
 

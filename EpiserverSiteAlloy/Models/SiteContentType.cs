@@ -1,4 +1,5 @@
 using EPiServer.DataAnnotations;
+using Models;
 
 namespace EpiserverSiteAlloy.Models
 {
@@ -9,7 +10,7 @@ namespace EpiserverSiteAlloy.Models
     {
         public SiteContentType()
         {
-            GroupName = Global.GroupNames.Default;
+            GroupName = SiteGlobal.GroupNames.Default;
         }
     }
 }

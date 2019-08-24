@@ -4,10 +4,10 @@ using System.Web.Mvc;
 using EPiServer.Core;
 using EPiServer.Filters;
 using EpiserverSiteAlloy.Business;
-using EpiserverSiteAlloy.Models.Blocks;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web.Mvc;
 using EPiServer;
+using Models.Blocks;
 
 namespace EpiserverSiteAlloy.Controllers
 {

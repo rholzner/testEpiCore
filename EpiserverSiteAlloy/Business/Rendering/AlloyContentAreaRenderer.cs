@@ -1,18 +1,18 @@
-using System;
-using System.Web.Mvc;
+using EPiServer;
 using EPiServer.Core;
 using EPiServer.Core.Html.StringParsing;
 using EPiServer.Web;
-using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
-using EPiServer;
+using Models.Contracts;
+using System;
+using System.Web.Mvc;
 
 namespace EpiserverSiteAlloy.Business.Rendering
 {
-    /// <summary>
-    /// Extends the default <see cref="ContentAreaRenderer"/> to apply custom CSS classes to each <see cref="ContentFragment"/>.
-    /// </summary>
-    public class AlloyContentAreaRenderer : ContentAreaRenderer
+  /// <summary>
+  /// Extends the default <see cref="ContentAreaRenderer"/> to apply custom CSS classes to each <see cref="ContentFragment"/>.
+  /// </summary>
+  public class AlloyContentAreaRenderer : ContentAreaRenderer
     {
         protected override string GetContentAreaItemCssClass(HtmlHelper htmlHelper, ContentAreaItem contentAreaItem)
         {

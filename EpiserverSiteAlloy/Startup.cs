@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
+using Models;
 using Owin;
 
 [assembly: OwinStartup(typeof(EpiserverSiteAlloy.Startup))]
@@ -28,7 +29,7 @@ namespace EpiserverSiteAlloy
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString(Global.LoginPath),
+                LoginPath = new PathString(SiteGlobal.LoginPath),
                 Provider = new CookieAuthenticationProvider
                 {
                     // If the "/util/login.aspx" has been used for login otherwise you don't need it you can remove OnApplyRedirect.

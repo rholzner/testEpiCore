@@ -4,12 +4,12 @@ using EPiServer.Core;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Framework.Web;
 using EpiserverSiteAlloy.Business;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
 using EPiServer;
 using EPiServer.Framework.Web.Mvc;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Controllers
 {

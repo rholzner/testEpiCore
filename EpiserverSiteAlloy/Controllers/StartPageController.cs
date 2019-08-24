@@ -1,8 +1,8 @@
 using System.Web.Mvc;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web;
 using EPiServer.Web.Mvc;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Controllers
 {

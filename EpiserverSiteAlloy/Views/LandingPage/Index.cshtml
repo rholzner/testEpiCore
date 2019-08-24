@@ -1,5 +1,8 @@
 @using EpiserverSiteAlloy
+@using Models;
+@using Models.Pages;
+
 @model PageViewModel<LandingPage>
 <div class="campaign-wrapper">
-    @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = Global.ContentAreaTags.FullWidth })
+    @Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = SiteGlobal.ContentAreaTags.FullWidth })
 </div>

@@ -1,9 +1,9 @@
 using System.Web.Mvc;
 using EpiserverSiteAlloy.Business;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web.Mvc;
 using EPiServer.Shell.Security;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Controllers
 {

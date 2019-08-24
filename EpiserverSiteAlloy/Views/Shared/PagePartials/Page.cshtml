@@ -1,5 +1,5 @@
 @using EPiServer.Core
-@model SitePageData
+@model Models.Pages.SitePageData
 
 <div class="border">
     @using(Html.BeginConditionalLink(Model.HasTemplate(), Url.PageLinkUrl(Model), Model.PageName))

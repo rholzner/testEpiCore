@@ -1,10 +1,10 @@
 using System.Web.Mvc;
-using EpiserverSiteAlloy.Models.Media;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
 using System;
 using EPiServer.Core;
+using Models.Media;
 
 namespace EpiserverSiteAlloy.Controllers
 {

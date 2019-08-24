@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using EpiserverSiteAlloy.Models.Pages;
 using EPiServer;
 using EPiServer.Core;
 using EPiServer.Filters;
 using EPiServer.Shell.Configuration;
 using EPiServer.Web;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Business
 {

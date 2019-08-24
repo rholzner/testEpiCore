@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using EPiServer.Core;
-using EpiserverSiteAlloy.Models.Blocks;
+using Models.Blocks;
 
 namespace EpiserverSiteAlloy.Models.ViewModels
 {

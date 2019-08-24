@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using EPiServer.Core;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Shell.ObjectEditing.EditorDescriptors;
+using Models;
 
 namespace EpiserverSiteAlloy.Business.EditorDescriptors
 {
     /// <summary>
     /// Registers an editor to select a ContactPage for a PageReference property using a dropdown
     /// </summary>
-    [EditorDescriptorRegistration(TargetType = typeof(PageReference), UIHint = Global.SiteUIHints.Contact)]
+    [EditorDescriptorRegistration(TargetType = typeof(PageReference), UIHint = SiteGlobal.SiteUIHints.Contact)]
     public class ContactPageSelector : EditorDescriptor
     {
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)

@@ -1,8 +1,8 @@
 using System.Web;
 using System.ComponentModel.DataAnnotations;
-using EpiserverSiteAlloy.Models.Pages;
 using EPiServer.Web;
 using EPiServer.Core;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Models.ViewModels
 {

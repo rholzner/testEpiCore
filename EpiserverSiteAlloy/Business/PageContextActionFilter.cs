@@ -1,7 +1,7 @@
 using System.Web.Mvc;
-using EpiserverSiteAlloy.Models.Pages;
 using EpiserverSiteAlloy.Models.ViewModels;
 using EPiServer.Web.Routing;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Business
 {

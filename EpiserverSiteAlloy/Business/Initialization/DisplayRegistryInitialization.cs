@@ -2,7 +2,7 @@ using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
-using System.Collections.Generic;
+using Models;
 using System.Web.Mvc;
 
 namespace EpiserverSiteAlloy.Business.Initialization
@@ -18,9 +18,9 @@ namespace EpiserverSiteAlloy.Business.Initialization
                 // Register Display Options
                 var options = ServiceLocator.Current.GetInstance<DisplayOptions>();
                 options
-                    .Add("full", "/displayoptions/full", Global.ContentAreaTags.FullWidth, "", "epi-icon__layout--full")
-                    .Add("wide", "/displayoptions/wide", Global.ContentAreaTags.TwoThirdsWidth, "", "epi-icon__layout--two-thirds")
-                    .Add("narrow", "/displayoptions/narrow", Global.ContentAreaTags.OneThirdWidth, "", "epi-icon__layout--one-third");
+                    .Add("full", "/displayoptions/full", SiteGlobal.ContentAreaTags.FullWidth, "", "epi-icon__layout--full")
+                    .Add("wide", "/displayoptions/wide", SiteGlobal.ContentAreaTags.TwoThirdsWidth, "", "epi-icon__layout--two-thirds")
+                    .Add("narrow", "/displayoptions/narrow", SiteGlobal.ContentAreaTags.OneThirdWidth, "", "epi-icon__layout--one-third");
 
                 AreaRegistration.RegisterAllAreas();
 

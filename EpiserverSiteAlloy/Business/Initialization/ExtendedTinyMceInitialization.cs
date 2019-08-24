@@ -1,9 +1,9 @@
-using EpiserverSiteAlloy.Models.Blocks;
-using EpiserverSiteAlloy.Models.Pages;
 using EPiServer.Cms.TinyMce.Core;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
+using Models.Blocks;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Business.Initialization
 {

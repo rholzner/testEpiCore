@@ -1,10 +1,9 @@
-using System;
 using EPiServer.Core;
-using EpiserverSiteAlloy.Models.Pages;
+using Models.Pages;
 
 namespace EpiserverSiteAlloy.Models.ViewModels
 {
-    public class PageViewModel<T> : IPageViewModel<T> where T : SitePageData
+  public class PageViewModel<T> : IPageViewModel<T> where T : SitePageData
     {
         public PageViewModel(T currentPage)
         {
