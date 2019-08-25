@@ -1,29 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using EPiServer;
 using EPiServer.Core;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using testEpiCore.EpiServer;
 
 namespace testEpiCore.Pages
 {
-    public class ArticlePage : PageModel
+    public class ArticlePage : EpiPageModel<Models.Pages.ArticlePage>
     {
-        public Models.Pages.ArticlePage epiPage { get;set;}
+        public ArticlePage(IEpiServerInitialize epi, IActionDescriptorCollectionProvider actionDescriptorCollectionProvider) : base(epi,actionDescriptorCollectionProvider)
+        {
+
+        }
+    }
+
+    public class EpiPageModel<T> : PageModel where T : IContent
+    {
+        public T epiPage { get;set;}
         private readonly IActionDescriptorCollectionProvider _actionDescriptorCollectionProvider;
         private readonly IContentLoader contentLoader;
-        public ArticlePage(IEpiServerInitialize epi, IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
+        public EpiPageModel(IEpiServerInitialize epi, IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
         {
             contentLoader = epi.GetInstance<IContentLoader>();
-            var pages = new List<Models.Pages.ArticlePage>();
+            var pages = new List<T>();
             _actionDescriptorCollectionProvider = actionDescriptorCollectionProvider;
             //CurrentPage = pages.FirstOrDefault(x => x.URLSegment == )
         }
-        public string Message { get; set; }
 
         public void OnGet()
         {
@@ -35,10 +40,11 @@ namespace testEpiCore.Pages
             }).ToList();
 
             var path = routes.FirstOrDefault( x => x.Template == Request.Path.Value.Replace("/",""));
-            var hasCurrentPage = contentLoader.TryGet<Models.Pages.ArticlePage>(new Guid(path.Name), out Models.Pages.ArticlePage CurrentPage);
+            var hasCurrentPage = contentLoader.TryGet<T>(new Guid(path.Name), out T CurrentPage);
             epiPage = CurrentPage;
         }
     }
+
     public class RouteModel
     {
         public string Name { get; set; }
