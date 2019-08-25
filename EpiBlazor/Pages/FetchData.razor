@@ -1,0 +1,44 @@
+﻿@page "/fetchdata"
+
+@using EpiBlazor.Data
+@inject EpiListPagesService _EpiListPagesService
+
+<h1>Episerver Pagess</h1>
+
+<p>This component all pages under startpage.</p>
+
+@if (items == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Type</td>
+                    <td>@item.Url</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    IEnumerable<PageListItem> items;
+
+    protected override async Task OnInitializedAsync()
+    {
+        items = await _EpiListPagesService.LoadALlPages();
+    }
+}
