@@ -54,7 +54,6 @@ namespace EpiBlazor
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapBlazorHub<App>(selector: "app");

@@ -30,7 +30,7 @@ namespace EpiBlazor.EpiEng
       Template = ad.AttributeRouteInfo.Template
     }).ToList();
 
-    var path = routes.FirstOrDefault(x => x.Template == Request.Path.Value.Replace("/", ""));
+    var path = routes.FirstOrDefault(x => x.Template == Request.Path.Value);
     var hasCurrentPage = contentLoader.TryGet(new Guid(path.Name), out T CurrentPage);
     epiPage = CurrentPage;
     }

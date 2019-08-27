@@ -1,3 +1,28 @@
 ﻿
-<h1>StandardPage</h1>
+@page 
+@using EpiBlazor.Shared
+@using System.Net.Http
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.JSInterop
+@using EpiBlazor
 
+@namespace EpiBlazor.Pages
+
+@Layout MainLayout
+
+@model EpiBlazor.Pages.StandardPageModel
+@{
+  ViewData["Title"] = Model.epiPage.Name;
+}
+
+<h1>@Model.epiPage.Name</h1>
+@if (!(Model.epiPage.MainBody is null))
+{
+@Model.epiPage.MainBody.ToHtmlString()
+
+}
+
+
+@*<ConentAreaEpiComponent contentArea="@Model.epiPage.MainContentArea" />*@

@@ -1,0 +1,40 @@
+﻿@using EPiServer;
+
+
+<h3>ConentAreaEpiComponent</h3>
+
+
+<p>This component all pages under startpage.</p>
+
+@if (contentItems == null)
+{
+<p><em>Loading...</em></p>
+}
+else
+{
+@foreach (var contentItem in contentItems)
+{
+<p>@contentItem</p>
+<br />
+}
+}
+
+
+@code {
+  [Parameter]
+  public EPiServer.Core.ContentArea contentArea { get; set; }
+
+  private List<string>
+  contentItems;
+
+  protected override void OnParametersSet()
+  {
+  contentItems = new List<string>
+    ();
+  foreach (var item in contentArea.Items)
+  {
+  contentItems.Add(item.ContentGuid.ToString());
+  }
+  }
+}
+
