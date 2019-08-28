@@ -1,12 +1,7 @@
 ﻿
-@page 
-@using EpiBlazor.Shared
-@using System.Net.Http
-@using Microsoft.AspNetCore.Authorization
-@using Microsoft.AspNetCore.Components.Forms
-@using Microsoft.AspNetCore.Components.Routing
-@using Microsoft.JSInterop
-@using EpiBlazor
+@page
+
+@using Shared.Blocks  
 
 @namespace EpiBlazor.Pages
 
@@ -25,4 +20,4 @@
 }
 
 
-@*<ConentAreaEpiComponent contentArea="@Model.epiPage.MainContentArea" />*@
+@(await Html.RenderComponentAsync<ConentAreaEpiComponent>(new { contentArea=Model.epiPage.MainContentArea }))

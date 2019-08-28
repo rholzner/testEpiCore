@@ -4,8 +4,6 @@
 <h3>ConentAreaEpiComponent</h3>
 
 
-<p>This component all pages under startpage.</p>
-
 @if (contentItems == null)
 {
 <p><em>Loading...</em></p>
@@ -29,12 +27,15 @@ else
 
   protected override void OnParametersSet()
   {
-  contentItems = new List<string>
-    ();
+  contentItems = new List<string>();
+  if (!(contentArea is null) && !contentArea.IsEmpty)
+  {
   foreach (var item in contentArea.Items)
   {
   contentItems.Add(item.ContentGuid.ToString());
   }
+  }
+
   }
 }
 

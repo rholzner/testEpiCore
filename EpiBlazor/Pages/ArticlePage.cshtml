@@ -1,0 +1,14 @@
+﻿@page
+
+@using Shared.Blocks
+
+@namespace EpiBlazor.Pages
+
+@model EpiBlazor.Pages.ArticlePageModel
+@{
+  ViewData["Title"] = Model.epiPage.Name;
+}
+
+<h1>@Model.epiPage.Name</h1>
+
+@(await Html.RenderComponentAsync<ConentAreaEpiComponent>(new { contentArea = Model.epiPage.MainContentArea }))
