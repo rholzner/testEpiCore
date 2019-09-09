@@ -1,0 +1,27 @@
+﻿
+@page
+
+@using EpiBlazorAppServerSide.Shared.Blocks;
+
+@namespace EpiBlazorAppServerSide.Pages
+
+@Layout MainLayout
+
+@model StandardPageModel
+@{
+  ViewData["Title"] = Model.epiPage.Name;
+}
+
+<h1>@Model.epiPage.Name</h1>
+@if (!(Model.epiPage.MainBody is null))
+{
+
+@Html.Raw(Model.epiPage.MainBody)
+
+}
+@if (!(Model.epiPage.MainContentArea is null))
+{
+<div id="MyComponent">
+  @(await Html.RenderComponentAsync<ConentAreaEpiComponent>(RenderMode.Static,new { contentArea = Model.epiPage.MainContentArea.Items.Select(x => x.ContentLink) }))
+</div>
+}

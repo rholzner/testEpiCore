@@ -1,0 +1,12 @@
+﻿@page
+
+@using EpiBlazorAppServerSide.Shared;
+
+@namespace EpiBlazor.Pages
+
+@model EpiBlazorAppServerSide.Pages.ArticlePageModel
+@{
+  ViewData["Title"] = Model.epiPage.Name;
+}
+
+<h1>@Model.epiPage.Name</h1>
